@@ -202,8 +202,6 @@ public class AddTarantula extends AppCompatActivity {
     }
 
 
-
-
     @Override
     protected void onActivityResult(int requestCode,int resultCode,@Nullable Intent data) {
         super.onActivityResult(requestCode, requestCode, data);
@@ -258,11 +256,9 @@ public class AddTarantula extends AppCompatActivity {
                                 throw task.getException();
                             }
 
-
                             //imgUrl = fileReference.getDownloadUrl().toString();
                             imgUrl = fileReference.getDownloadUrl().toString();
                             return fileReference.getDownloadUrl();
-
 
                         }
                        /* Handler handler = new Handler();
@@ -274,7 +270,6 @@ public class AddTarantula extends AppCompatActivity {
                         }, 500);*/
                     });
                 }
-
             }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
