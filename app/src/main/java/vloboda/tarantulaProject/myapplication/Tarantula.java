@@ -1,85 +1,86 @@
 package vloboda.tarantulaProject.myapplication;
 
 public class Tarantula {
-    String mSpecies, mName, mOrigin, mOwner, imgURL;
+    String species, name, origin, owner, imgURL;
 
-    long mTemper, mVenom, mHairs;
+    long temper, venom, hairs;
 
     public Tarantula(){
 
     }
 
-    public Tarantula(String mSpecies, String mName, String mOrigin, String mOwner, String imgURL, long mTemper, long mVenom, long mHairs) {
-        this.mSpecies = mSpecies;
-        this.mName = mName;
-        this.mOrigin = mOrigin;
-        this.mOwner = mOwner;
+    public Tarantula(String species, String name, String origin, String owner, String imgURL, long temper, long venom, long hairs) {
+        this.species = species;
+        this.name = name;
+        this.origin = origin;
+        this.owner = owner;
         this.imgURL = imgURL;
-        this.mTemper = mTemper;
-        this.mVenom = mVenom;
-        this.mHairs = mHairs;
+        this.temper = temper;
+        this.venom = venom;
+        this.hairs = hairs;
     }
 
-    public void setmSpecies(String mSpecies) {
-        this.mSpecies = mSpecies;
+    public String getSpecies() {
+        return species;
     }
 
-    public void setmName(String mName) {
-        this.mName = mName;
+    public void setSpecies(String species) {
+        this.species = species;
     }
 
-    public void setmOrigin(String mOrigin) {
-        this.mOrigin = mOrigin;
+    public String getName() {
+        return name;
     }
 
-    public void setmTemper(long mTemper) {
-        this.mTemper = mTemper;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setmVenom(long mVenom) {
-        this.mVenom = mVenom;
+    public String getOrigin() {
+        return origin;
     }
 
-    public void setmHairs(long mHairs) {
-        this.mHairs = mHairs;
+    public void setOrigin(String origin) {
+        this.origin = origin;
     }
 
-    public String getmSpecies() {
-        return mSpecies;
+    public String getOwner() {
+        return owner;
     }
 
-    public String getmName() {
-        return mName;
+    public void setOwner(String owner) {
+        this.owner = owner;
     }
 
-    public void setmOwner(String mOwner) {
-        this.mOwner = mOwner;
+    public String getImgURL() {
+        return imgURL;
     }
 
     public void setImgURL(String imgURL) {
         this.imgURL = imgURL;
     }
 
-    public String getmOrigin() {
-        return mOrigin;
+    public long getTemper() {
+        return temper;
     }
 
-    public long getmTemper() {
-        return mTemper;
+    public void setTemper(long temper) {
+        this.temper = temper;
     }
 
-    public long getmVenom() {
-        return mVenom;
+    public long getVenom() {
+        return venom;
     }
 
-    public long getmHairs() {
-        return mHairs;
-    }
-    public String getmOwner() {
-        return mOwner;
+    public void setVenom(long venom) {
+        this.venom = venom;
     }
 
-    public String getImgURL() {
-        return imgURL;
+    public long getHairs() {
+        return hairs;
+    }
+
+    public void setHairs(long hairs) {
+        this.hairs = hairs;
     }
 }

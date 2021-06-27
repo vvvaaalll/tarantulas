@@ -34,9 +34,9 @@ public class TarantulaAdapter extends RecyclerView.Adapter<TarantulaAdapter.MyVi
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         Tarantula tarantula = list.get(position);
-        holder.species.setText(tarantula.mSpecies);
-        holder.name.setText(tarantula.mName);
-        holder.origin.setText(tarantula.mOrigin);
+        holder.species.setText(tarantula.species);
+        holder.name.setText(tarantula.name);
+        holder.origin.setText(tarantula.origin);
        /* holder.temper.setText(tarantula.getmTemper());
         holder.venom.setText(tarantula.getmVenom());
         holder.hairs.setText(tarantula.getmHairs());*/
