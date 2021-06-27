@@ -259,9 +259,6 @@ public class AddTarantula extends AppCompatActivity {
                             }
 
 
-
-
-
                             //imgUrl = fileReference.getDownloadUrl().toString();
                             imgUrl = fileReference.getDownloadUrl().toString();
                             return fileReference.getDownloadUrl();

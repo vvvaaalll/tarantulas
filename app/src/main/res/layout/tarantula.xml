@@ -214,6 +214,7 @@
                             android:layout_width="26dp"
                             android:layout_height="25dp"
                             android:buttonTint="#FF0000"
+                            android:clickable="false"
                             android:text="1"
                             android:textSize="0sp" />
 
@@ -222,6 +223,7 @@
                             android:layout_width="26dp"
                             android:layout_height="25dp"
                             android:buttonTint="#FFC107"
+                            android:clickable="false"
                             android:text="2"
                             android:textSize="0sp" />
 
@@ -230,6 +232,7 @@
                             android:layout_width="26dp"
                             android:layout_height="25dp"
                             android:buttonTint="#00FD0A"
+                            android:clickable="false"
                             android:text="3"
                             android:textSize="0sp" />
 
