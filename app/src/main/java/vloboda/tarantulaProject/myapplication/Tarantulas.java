@@ -59,7 +59,8 @@ public class Tarantulas extends AppCompatActivity {
 
     private void EventChangeListener()//.orderBy("species",Query.Direction.ASCENDING)
      {
-        fDatabase.collection("tarantulas")
+        //fDatabase.collection("tarantulas")
+         fDatabase.collection("users").document(userID).collection("tarantulas")
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {

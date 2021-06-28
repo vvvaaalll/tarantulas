@@ -33,6 +33,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
@@ -116,6 +117,7 @@ public class AddTarantula extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         fStorage = FirebaseStorage.getInstance().getReference("tarantulas");
+
         userID = fAuth.getCurrentUser().getUid();
 
 
@@ -156,7 +158,9 @@ public class AddTarantula extends AppCompatActivity {
                 UploadFile();
 
                 userID = fAuth.getCurrentUser().getUid();
-                DocumentReference documentReference = fStore.collection("tarantulas").document();
+                DocumentReference documentReference = fStore.collection("users").document(userID).collection("tarantulas").document();
+                //CollectionReference collectionReference = fStore.collection("user").document(userID).collection("tarantulas");
+
                 HashMap<String,Object> tarantula = new HashMap<>();
                 tarantula.put("name",name);
                 tarantula.put("species",species);
