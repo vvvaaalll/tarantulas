@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentChange;
@@ -29,8 +30,10 @@ public class Tarantulas extends AppCompatActivity {
 
     RecyclerView recyclerView;
     FirebaseFirestore fDatabase;
+    FirebaseAuth fAuth;
     TarantulaAdapter myAdapter;
     ArrayList<Tarantula> tarantulaArrayList;
+    String userID;
 
 
     @Override
@@ -43,6 +46,8 @@ public class Tarantulas extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         fDatabase = FirebaseFirestore.getInstance();
+        fAuth     = FirebaseAuth.getInstance();
+        userID = fAuth.getCurrentUser().getUid().toString();
 
         tarantulaArrayList = new ArrayList<Tarantula>();
         myAdapter = new TarantulaAdapter(Tarantulas.this, tarantulaArrayList);
@@ -66,8 +71,15 @@ public class Tarantulas extends AppCompatActivity {
                         for(DocumentChange fDatabase : value.getDocumentChanges()){
 
                             if(fDatabase.getType() == DocumentChange.Type.ADDED){
+                              Tarantula tarantula =  fDatabase.getDocument().toObject(Tarantula.class);
 
-                                tarantulaArrayList.add(fDatabase.getDocument().toObject(Tarantula.class));
+                               // Toast.makeText(Tarantulas.this, tarantula.owner,Toast.LENGTH_SHORT).show();
+                                //propali pokušaji povezivanja userID-a i tarantula.owner
+
+                               // if(tarantula.getOwner() == userID){
+                                //tarantulaArrayList.add(fDatabase.getDocument().toObject(Tarantula.class));
+                                    tarantulaArrayList.add(tarantula);
+                               // }
 
                             }
                             myAdapter.notifyDataSetChanged();
