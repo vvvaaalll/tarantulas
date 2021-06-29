@@ -79,15 +79,24 @@ public class AddTarantula extends AppCompatActivity {
 
     ImageView mImage;
     EditText mSpecies, mName, mOrigin;
+
     RadioGroup temperGroup;
     RadioGroup venomGroup;
-    RadioButton temperButton;
-    RadioButton venomButton;
+    RadioButton temperButton1;
+    RadioButton temperButton2;
+    RadioButton temperButton3;
+    RadioButton temperButton4;
+    RadioButton temperButton5;
+    RadioButton temperButton6;
+
+    RadioButton venomButton1;
+    RadioButton venomButton2;
+    RadioButton venomButton3;
     CheckBox mHairs;
     Button mSubmit;
     ProgressBar mProgressBar;
 
-    String imgUrl, imgURL;
+    String imgUrl, imgName;
 
     FirebaseFirestore fStore;
     StorageReference fStorage;
@@ -113,12 +122,26 @@ public class AddTarantula extends AppCompatActivity {
         mHairs = findViewById(R.id.urticatingCheckBox);
         mProgressBar = findViewById(R.id.progressBar);
 
+        temperButton1 = findViewById(R.id.temper1);
+        temperButton2 = findViewById(R.id.temper2);
+        temperButton3 = findViewById(R.id.temper3);
+        temperButton4 = findViewById(R.id.temper4);
+        temperButton5 = findViewById(R.id.temper5);
+        temperButton6 = findViewById(R.id.temper6);
+
+        venomButton1 = findViewById(R.id.venom1);
+        venomButton2 = findViewById(R.id.venom2);
+        venomButton3 = findViewById(R.id.venom3);
+
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
-        fStorage = FirebaseStorage.getInstance().getReference("tarantulas");
+        fStorage = FirebaseStorage.getInstance().getReference();
 
         userID = fAuth.getCurrentUser().getUid();
+
+        mProgressBar.setVisibility(View.GONE);
+
 
 
 
@@ -132,21 +155,34 @@ public class AddTarantula extends AppCompatActivity {
                 String species = mSpecies.getText().toString().trim();
                 String origin = mOrigin.getText().toString().trim();
                 int hairs;
+                int temper = 0;
+                int venom = 0;
 
 
 
-                mProgressBar.setVisibility(View.GONE);
 
-                int temperID = temperGroup.getCheckedRadioButtonId();
-                temperButton = findViewById(temperID);
-                int temper = Integer.parseInt(temperButton.getText().toString());
+                if(temperButton1.isChecked()){
+                     temper = Integer.parseInt(temperButton1.getText().toString());
+                }else if(temperButton2.isChecked()){
+                     temper = Integer.parseInt(temperButton2.getText().toString());
+                }else if(temperButton3.isChecked()){
+                     temper = Integer.parseInt(temperButton3.getText().toString());
+                }else if(temperButton4.isChecked()){
+                     temper = Integer.parseInt(temperButton4.getText().toString());
+                }else if(temperButton5.isChecked()){
+                     temper = Integer.parseInt(temperButton5.getText().toString());
+                } else if(temperButton6.isChecked()){
+                     temper = Integer.parseInt(temperButton6.getText().toString());
+                }
 
 
-
-                int venomID = venomGroup.getCheckedRadioButtonId();
-                venomButton = findViewById(venomID);
-                int venom = Integer.parseInt(venomButton.getText().toString());
-
+                if(venomButton1.isChecked()){
+                    venom = Integer.parseInt(venomButton1.getText().toString());
+                }else if(venomButton2.isChecked()){
+                    venom = Integer.parseInt(venomButton2.getText().toString());
+                } else if(venomButton3.isChecked()){
+                    venom = Integer.parseInt(venomButton3.getText().toString());
+                }
 
 
                 if(mHairs.isChecked()){
@@ -157,9 +193,8 @@ public class AddTarantula extends AppCompatActivity {
 
                 UploadFile();
 
-                userID = fAuth.getCurrentUser().getUid();
+
                 DocumentReference documentReference = fStore.collection("users").document(userID).collection("tarantulas").document();
-                //CollectionReference collectionReference = fStore.collection("user").document(userID).collection("tarantulas");
 
                 HashMap<String,Object> tarantula = new HashMap<>();
                 tarantula.put("name",name);
@@ -168,8 +203,7 @@ public class AddTarantula extends AppCompatActivity {
                 tarantula.put("temper",temper);
                 tarantula.put("venom",venom);
                 tarantula.put("hairs",hairs);
-                tarantula.put("owner",userID.toString());
-                tarantula.put("imgURL",imgURL);
+                tarantula.put("imgName", imgName);
 
 
                 documentReference.set(tarantula).addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -177,7 +211,6 @@ public class AddTarantula extends AppCompatActivity {
                     public void onSuccess(Void aVoid) {
                         Log.d("TAG", "onSuccess: tarantula profile is created for" + userID);
 
-                        Toast.makeText(AddTarantula.this, "Succesfully uploaded!",Toast.LENGTH_SHORT).show();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
@@ -231,8 +264,8 @@ public class AddTarantula extends AppCompatActivity {
 
     private void UploadFile(){
         if(imgUri != null){
-
-            StorageReference fileReference = fStorage.child(System.currentTimeMillis() + "." + getFileExtension(imgUri));
+            imgName = (System.currentTimeMillis() + "." + getFileExtension(imgUri));
+            StorageReference fileReference = fStorage.child("tarantulas").child(imgName);
             final UploadTask uploadTask = fileReference.putFile(imgUri);
 
 
@@ -253,26 +286,6 @@ public class AddTarantula extends AppCompatActivity {
                         }
                     }, 500);
 
-                    Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
-                        @Override
-                        public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
-                            if(!task.isSuccessful()){
-                                throw task.getException();
-                            }
-
-                            //imgUrl = fileReference.getDownloadUrl().toString();
-                            imgUrl = fileReference.getDownloadUrl().toString();
-                            return fileReference.getDownloadUrl();
-
-                        }
-                       /* Handler handler = new Handler();
-                            handler.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                mProgressBar.setProgress(0);
-                            }
-                        }, 500);*/
-                    });
                 }
             }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
                 @Override
@@ -280,39 +293,18 @@ public class AddTarantula extends AppCompatActivity {
                     double progress = (100.0 * snapshot.getBytesTransferred() / snapshot.getTotalByteCount());
                     mProgressBar.setProgress((int) progress);
                     if(progress == 100){
+                        mProgressBar.setVisibility(View.GONE);
+                        Toast.makeText(AddTarantula.this, "Succesfully uploaded!",Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(getApplicationContext(), Tarantulas.class));
                     }
                 }
             });
 
 
-
-
-
-
-
-
-
-                 /*   uploadTask.(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            Handler handler = new Handler();
-                            handler.postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    mProgressBar.setProgress(0);
-                                }
-                            }, 500);
-
-
-                        })
-                    */
-
-
-
-
         }else{
-                Toast.makeText(this, "no image selected", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "no image selected", Toast.LENGTH_SHORT).show();
+                mProgressBar.setVisibility(View.GONE);
+                Toast.makeText(AddTarantula.this, "Succesfully uploaded!",Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), Tarantulas.class));
             }
 

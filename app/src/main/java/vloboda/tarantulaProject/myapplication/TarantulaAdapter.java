@@ -1,6 +1,11 @@
 package vloboda.tarantulaProject.myapplication;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,12 +14,21 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.storage.FileDownloadTask;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class TarantulaAdapter extends RecyclerView.Adapter<TarantulaAdapter.MyViewHolder> {
@@ -80,13 +94,33 @@ public class TarantulaAdapter extends RecyclerView.Adapter<TarantulaAdapter.MyVi
 
         }
 
-        
-
             if (tarantula.hairs == 1) {
                 holder.hairs.setChecked(true);
             }
 
-        //Picasso.get().load(tarantula.imgURL).into(holder.imageView);      NE RADI, GASI APK
+
+
+            if(!TextUtils.isEmpty(tarantula.imgName)) {
+
+                FirebaseStorage fStorage = FirebaseStorage.getInstance();
+                StorageReference refImage = fStorage.getReference()
+                        .child("tarantulas")
+                        .child(tarantula.imgName);
+
+                refImage.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        Picasso.get().load(uri).into(holder.imageView);
+                    }
+                });
+            }
+
+
+
+
+
+
+
 
 
     }
@@ -113,7 +147,7 @@ public class TarantulaAdapter extends RecyclerView.Adapter<TarantulaAdapter.MyVi
             temper = itemView.findViewById(R.id.temperGroup);
             venom = itemView.findViewById(R.id.venomGroup);
             hairs = itemView.findViewById(R.id.urticatingCheckBox);
-            imageView = itemView.findViewById(R.id.imageView);
+            imageView = itemView.findViewById(R.id.tarantulaImage);
 
             temper1 = itemView.findViewById(R.id.temper1);
             temper2 = itemView.findViewById(R.id.temper2);

@@ -1,7 +1,7 @@
 package vloboda.tarantulaProject.myapplication;
 
 public class Tarantula {
-    String species, name, origin, owner, imgURL;
+    String species, name, origin, imgName;
 
     long temper, venom, hairs;
 
@@ -9,12 +9,11 @@ public class Tarantula {
 
     }
 
-    public Tarantula(String species, String name, String origin, String owner, String imgURL, long temper, long venom, long hairs) {
+    public Tarantula(String species, String name, String origin, String imgName, long temper, long venom, long hairs) {
         this.species = species;
         this.name = name;
         this.origin = origin;
-        this.owner = owner;
-        this.imgURL = imgURL;
+        this.imgName = imgName;
         this.temper = temper;
         this.venom = venom;
         this.hairs = hairs;
@@ -44,22 +43,6 @@ public class Tarantula {
         this.origin = origin;
     }
 
-    public String getOwner() {
-        return owner;
-    }
-
-    public void setOwner(String owner) {
-        this.owner = owner;
-    }
-
-    public String getImgURL() {
-        return imgURL;
-    }
-
-    public void setImgURL(String imgURL) {
-        this.imgURL = imgURL;
-    }
-
     public long getTemper() {
         return temper;
     }
@@ -82,5 +65,13 @@ public class Tarantula {
 
     public void setHairs(long hairs) {
         this.hairs = hairs;
+    }
+
+    public String getImgName() {
+        return imgName;
+    }
+
+    public void setImgName(String imgName) {
+        this.imgName = imgName;
     }
 }
