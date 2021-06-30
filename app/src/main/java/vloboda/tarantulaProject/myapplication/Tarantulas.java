@@ -102,12 +102,6 @@ public class Tarantulas extends AppCompatActivity {
             case R.id.tarantulasMenu:
                 startActivity(new Intent(getApplicationContext(), Tarantulas.class));
                 return true;
-            case R.id.feedersMenu:
-                startActivity(new Intent(getApplicationContext(), FeederInsects.class));
-                return true;
-            case R.id.enclosuresMenu:
-                startActivity(new Intent(getApplicationContext(), Enclosures.class));
-                return true;
             case R.id.logOutMenu:
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(getApplicationContext(),Login.class));

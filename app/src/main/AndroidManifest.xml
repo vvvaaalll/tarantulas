@@ -13,8 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tarantulas">
         <activity android:name=".AddTarantula"></activity>
-        <activity android:name=".Enclosures" />
-        <activity android:name=".FeederInsects" />
         <activity android:name=".Login" />
         <activity android:name=".Register">
             <intent-filter>
