@@ -6,14 +6,6 @@
         android:title="Tarantulas"
         app:showAsAction="never"/>
 
-    <item android:id="@+id/feedersMenu"
-        android:title="Feeder insects"
-        app:showAsAction="never"/>
-
-    <item android:id="@+id/enclosuresMenu"
-        android:title="Enclosures"
-        app:showAsAction="never"/>
-
     <item android:id="@+id/logOutMenu"
         android:title="Log out"
         app:showAsAction="never"/>

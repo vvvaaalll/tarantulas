@@ -4,8 +4,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
@@ -181,11 +179,17 @@ public class TarantulaAdapter extends RecyclerView.Adapter<TarantulaAdapter.MyVi
                         public void onClick(DialogInterface dialog, int which) {
                             //DELETE FROM FIRESTORE AND FIRESTORAGE
                             String userID = FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
-                            FirebaseStorage.getInstance().getReference()
-                                    .child("tarantulas")
-                                    .child(tarantula.imgName).delete();
-                            FirebaseFirestore.getInstance().collection("users").document(userID).collection("tarantulas").document(tarantula.getTarantulaID()).delete();
-                            
+                            if(!tarantula.imgName.isEmpty()) {
+                                FirebaseStorage.getInstance().getReference()
+                                        .child("tarantulas")
+                                        .child(tarantula.imgName).delete();
+                            }
+
+                                FirebaseFirestore.getInstance().collection("users").document(userID).collection("tarantulas").document(tarantula.getTarantulaID()).delete();
+
+
+                            itemView.getContext().startActivity(new Intent(itemView.getContext(), Tarantulas.class));
+                            //startActivity(new Intent(getApplicationContext(),Tarantulas.class));
                             Toast.makeText(itemView.getContext(), "Succesfully deleted tarantula" , Toast.LENGTH_SHORT).show();
 
                         }

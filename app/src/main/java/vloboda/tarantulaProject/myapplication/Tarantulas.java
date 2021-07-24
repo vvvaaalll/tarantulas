@@ -2,11 +2,15 @@ package vloboda.tarantulaProject.myapplication;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -20,7 +24,6 @@ import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 
@@ -92,6 +95,7 @@ public class Tarantulas extends AppCompatActivity {
         return true;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
@@ -101,6 +105,45 @@ public class Tarantulas extends AppCompatActivity {
             case R.id.logOutMenu:
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(getApplicationContext(),Login.class));
+                finish();
+                return true;
+            case R.id.deleteAccount:
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Do you want to delete this account?");
+                builder.setMessage("All your tarantulas will be lost");
+
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                       tarantulaArrayList.forEach((tarantula) ->{
+                           FirebaseStorage.getInstance().getReference()
+                                   .child("tarantulas")
+                                   .child(tarantula.imgName).delete();
+
+                        });
+                       FirebaseFirestore.getInstance().collection("users")
+                               .document(FirebaseAuth.getInstance().getUid().toString());
+                       FirebaseAuth.getInstance().getCurrentUser().delete();
+
+                        Toast.makeText(Tarantulas.this, "Succesfully deleted your account" , Toast.LENGTH_SHORT).show();
+                        //startActivity(new Intent(getApplicationContext(),Login.class));
+                    }
+                })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        });
+                AlertDialog ad = builder.create();
+                ad.show();
+
+
+
+
+
                 finish();
                 return true;
             case R.id.addMenu:

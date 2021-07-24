@@ -6,12 +6,8 @@
         android:title="Tarantulas"
         app:showAsAction="never"/>
 
-    <item android:id="@+id/feedersMenu"
-        android:title="Feeder insects"
-        app:showAsAction="never"/>
-
-    <item android:id="@+id/enclosuresMenu"
-        android:title="Enclosures"
+    <item android:id="@+id/deleteAccount"
+        android:title="Delete account"
         app:showAsAction="never"/>
 
     <item android:id="@+id/logOutMenu"
