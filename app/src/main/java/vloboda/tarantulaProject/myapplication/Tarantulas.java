@@ -60,7 +60,7 @@ public class Tarantulas extends AppCompatActivity {
 
     private void EventChangeListener()
      {
-        //fDatabase.collection("tarantulas")
+
          fDatabase.collection("users").document(userID).collection("tarantulas")
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override

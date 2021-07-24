@@ -6,7 +6,7 @@ public class Tarantula {
     String origin;
     String imgName;
 
-    public String getTarantulaID() {
+   /* public String getTarantulaID() {
         return tarantulaID;
     }
 
@@ -15,6 +15,8 @@ public class Tarantula {
     }
 
     String tarantulaID;
+
+    */
 
     long temper, venom, hairs;
 
