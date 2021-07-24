@@ -21,6 +21,7 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 
@@ -57,7 +58,7 @@ public class Tarantulas extends AppCompatActivity {
 
     }
 
-    private void EventChangeListener()//.orderBy("species",Query.Direction.ASCENDING)
+    private void EventChangeListener()
      {
         //fDatabase.collection("tarantulas")
          fDatabase.collection("users").document(userID).collection("tarantulas")
@@ -72,15 +73,10 @@ public class Tarantulas extends AppCompatActivity {
                         for(DocumentChange fDatabase : value.getDocumentChanges()){
 
                             if(fDatabase.getType() == DocumentChange.Type.ADDED){
-                              Tarantula tarantula =  fDatabase.getDocument().toObject(Tarantula.class);
-
-                               // Toast.makeText(Tarantulas.this, tarantula.owner,Toast.LENGTH_SHORT).show();
-                                //propali pokušaji povezivanja userID-a i tarantula.owner
-
-                               // if(tarantula.getOwner() == userID){
-                                //tarantulaArrayList.add(fDatabase.getDocument().toObject(Tarantula.class));
-                                    tarantulaArrayList.add(tarantula);
-                               // }
+                                QueryDocumentSnapshot document = fDatabase.getDocument();
+                              Tarantula tarantula =  document.toObject(Tarantula.class);
+                              tarantula.tarantulaID = document.getId();
+                               tarantulaArrayList.add(tarantula);
 
                             }
                             myAdapter.notifyDataSetChanged();
@@ -88,6 +84,8 @@ public class Tarantulas extends AppCompatActivity {
                     }
                 });
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

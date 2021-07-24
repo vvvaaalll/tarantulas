@@ -271,6 +271,19 @@
                         android:clickable="false"
                          />
 
+                    <Button
+                        android:id="@+id/RW_deletebtn"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:text="Delete"
+                        android:background="@color/black"
+                        android:layout_marginLeft="25dp"
+                        android:textSize="12sp"
+                        android:textAlignment="textStart"
+                        android:padding="0dp"
+
+                        />
+
                 </LinearLayout>
 
             </LinearLayout>

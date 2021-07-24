@@ -1,7 +1,20 @@
 package vloboda.tarantulaProject.myapplication;
 
 public class Tarantula {
-    String species, name, origin, imgName;
+    String species;
+    String name;
+    String origin;
+    String imgName;
+
+    public String getTarantulaID() {
+        return tarantulaID;
+    }
+
+    public void setTarantulaID(String tarantulaID) {
+        this.tarantulaID = tarantulaID;
+    }
+
+    String tarantulaID;
 
     long temper, venom, hairs;
 

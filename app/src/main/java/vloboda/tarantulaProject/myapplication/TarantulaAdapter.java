@@ -1,6 +1,8 @@
 package vloboda.tarantulaProject.myapplication;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -22,6 +24,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -35,11 +38,13 @@ public class TarantulaAdapter extends RecyclerView.Adapter<TarantulaAdapter.MyVi
 
     Context context;
     ArrayList<Tarantula> list;
+   // FirebaseFirestore fStore;
 
 
     public TarantulaAdapter(Context context, ArrayList<Tarantula> list) {
         this.context = context;
         this.list = list;
+       // this.fStore = fDataBase;
 
     }
 
@@ -48,6 +53,7 @@ public class TarantulaAdapter extends RecyclerView.Adapter<TarantulaAdapter.MyVi
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(context).inflate(R.layout.tarantula,parent, false);
         return new MyViewHolder(v);
+
     }
 
     @Override
@@ -57,6 +63,8 @@ public class TarantulaAdapter extends RecyclerView.Adapter<TarantulaAdapter.MyVi
             holder.species.setText(tarantula.species);
             holder.name.setText(tarantula.name);
             holder.origin.setText(tarantula.origin);
+           // holder.tarantula = tarantula;
+
 
         switch((int)tarantula.temper) {
             case 1:
@@ -113,17 +121,26 @@ public class TarantulaAdapter extends RecyclerView.Adapter<TarantulaAdapter.MyVi
                         Picasso.get().load(uri).into(holder.imageView);
                     }
                 });
+
+
             }
 
 
+    }
 
 
+    public static void DeleteTarantula(Tarantula tarantula){
+        FirebaseFirestore fStore;
+        fStore = FirebaseFirestore.getInstance();
+        String userID = FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
 
-
-
+        fStore.collection("users").document(userID).collection("tarantulas").document(tarantula.getTarantulaID()).delete();
+        //getSnapshots().getSnapshot(position).getReference.delete();
 
 
     }
+
+
 
     @Override
     public int getItemCount() {
@@ -137,9 +154,12 @@ public class TarantulaAdapter extends RecyclerView.Adapter<TarantulaAdapter.MyVi
         RadioButton temper1,temper2,temper3,temper4,temper5,temper6, venom1, venom2, venom3;
         CheckBox hairs;
         ImageView imageView;
+       // Tarantula tarantula;
 
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
+
+
 
             species = itemView.findViewById(R.id.tvSpecies);
             name = itemView.findViewById(R.id.tvName);
@@ -160,6 +180,42 @@ public class TarantulaAdapter extends RecyclerView.Adapter<TarantulaAdapter.MyVi
             venom2 = itemView.findViewById(R.id.venom2);
             venom3 = itemView.findViewById(R.id.venom3);
 
+
+/*            itemView.findViewById(R.id.RW_deletebtn).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    AlertDialog.Builder builder = new AlertDialog.Builder(itemView.getContext());
+                    builder.setTitle("Do you want to delete this tarantula?");
+
+                    builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            //DELETE FROM FIRESTORE
+                            DeleteTarantula(tarantula);
+
+                            //DELETE FROM ARRAY
+                        }
+                    })
+                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    });
+                    AlertDialog ad = builder.create();
+                    ad.show();
+
+
+
+
+
+
+
+
+                }
+            });
+*/
         }
 
 
