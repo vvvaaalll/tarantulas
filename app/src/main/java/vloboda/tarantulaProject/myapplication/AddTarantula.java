@@ -91,7 +91,7 @@ public class AddTarantula extends AppCompatActivity {
     Button mSubmit;
     ProgressBar mProgressBar;
 
-    String imgUrl, imgName;
+    String imgName;
 
     FirebaseFirestore fStore;
     StorageReference fStorage;

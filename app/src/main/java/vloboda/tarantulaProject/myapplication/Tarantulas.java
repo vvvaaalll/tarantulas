@@ -74,11 +74,12 @@ public class Tarantulas extends AppCompatActivity {
                             if(fDatabase.getType() == DocumentChange.Type.ADDED){
                               Tarantula tarantula =  fDatabase.getDocument().toObject(Tarantula.class);
 
-
+                                    tarantula.setTarantulaID(fDatabase.getDocument().getId());
                                     tarantulaArrayList.add(tarantula);
 
                             }
                             myAdapter.notifyDataSetChanged();
+
                         }
                     }
                 });

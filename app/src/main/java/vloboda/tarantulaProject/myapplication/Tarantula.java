@@ -5,8 +5,11 @@ public class Tarantula {
     String name;
     String origin;
     String imgName;
+    String tarantulaID;
+    long temper, venom, hairs;
 
-   /* public String getTarantulaID() {
+
+   public String getTarantulaID() {
         return tarantulaID;
     }
 
@@ -14,11 +17,11 @@ public class Tarantula {
         this.tarantulaID = tarantulaID;
     }
 
-    String tarantulaID;
 
-    */
 
-    long temper, venom, hairs;
+
+
+
 
     public Tarantula(){
 
