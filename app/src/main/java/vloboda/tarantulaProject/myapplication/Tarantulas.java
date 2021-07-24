@@ -108,14 +108,14 @@ public class Tarantulas extends AppCompatActivity {
                 finish();
                 return true;
             case R.id.deleteAccount:
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                /*AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Do you want to delete this account?");
                 builder.setMessage("All your tarantulas will be lost");
 
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 
                     @Override
-                    public void onClick(DialogInterface dialog, int which) {
+                    public void onClick(DialogInterface dialog, int which) {*/
 
                        tarantulaArrayList.forEach((tarantula) ->{
                            if(!tarantula.imgName.isEmpty()) {
@@ -129,8 +129,8 @@ public class Tarantulas extends AppCompatActivity {
                        FirebaseAuth.getInstance().getCurrentUser().delete();
 
                         Toast.makeText(Tarantulas.this, "Succesfully deleted your account" , Toast.LENGTH_SHORT).show();
-                        //startActivity(new Intent(getApplicationContext(),Login.class));
-                    }
+                        startActivity(new Intent(getApplicationContext(),Login.class));
+                   /* }
                 })
                         .setNegativeButton("No", new DialogInterface.OnClickListener() {
                             @Override
@@ -143,7 +143,7 @@ public class Tarantulas extends AppCompatActivity {
 
 
 
-
+*/
 
                 finish();
                 return true;
@@ -157,9 +157,11 @@ public class Tarantulas extends AppCompatActivity {
     }
 
     public void Logout(View view) {
-        FirebaseAuth.getInstance().signOut();
-        startActivity(new Intent(getApplicationContext(),Login.class));
-        finish();
+        if(FirebaseAuth.getInstance().getCurrentUser()!=null) {
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(getApplicationContext(), Login.class));
+            finish();
+        }
     }
 
 

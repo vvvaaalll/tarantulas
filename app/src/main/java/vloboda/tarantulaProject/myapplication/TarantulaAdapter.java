@@ -185,7 +185,8 @@ public class TarantulaAdapter extends RecyclerView.Adapter<TarantulaAdapter.MyVi
                                         .child(tarantula.imgName).delete();
                             }
 
-                                FirebaseFirestore.getInstance().collection("users").document(userID).collection("tarantulas").document(tarantula.getTarantulaID()).delete();
+                                FirebaseFirestore.getInstance().collection("users").document(userID)
+                                        .collection("tarantulas").document(tarantula.getTarantulaID()).delete();
 
 
                             itemView.getContext().startActivity(new Intent(itemView.getContext(), Tarantulas.class));

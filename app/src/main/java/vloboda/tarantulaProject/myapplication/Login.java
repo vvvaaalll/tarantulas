@@ -44,6 +44,10 @@ public class Login extends AppCompatActivity {
         mCreateBtn  = findViewById(R.id.createText);
         forgotTextLink= findViewById(R.id.forgotPassword);
 
+        if(fAuth.getCurrentUser() != null){
+            startActivity(new Intent(getApplicationContext(), Tarantulas.class));
+            finish();
+        }
 
         progressBar.setVisibility(View.GONE);
 
