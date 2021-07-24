@@ -118,10 +118,11 @@ public class Tarantulas extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
 
                        tarantulaArrayList.forEach((tarantula) ->{
-                           FirebaseStorage.getInstance().getReference()
-                                   .child("tarantulas")
-                                   .child(tarantula.imgName).delete();
-
+                           if(!tarantula.imgName.isEmpty()) {
+                               FirebaseStorage.getInstance().getReference()
+                                       .child("tarantulas")
+                                       .child(tarantula.imgName).delete();
+                           }
                         });
                        FirebaseFirestore.getInstance().collection("users")
                                .document(FirebaseAuth.getInstance().getUid().toString());
