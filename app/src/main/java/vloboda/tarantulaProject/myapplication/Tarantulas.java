@@ -118,14 +118,22 @@ public class Tarantulas extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {*/
 
                        tarantulaArrayList.forEach((tarantula) ->{
-                           if(!tarantula.imgName.isEmpty()) {
-                               FirebaseStorage.getInstance().getReference()
-                                       .child("tarantulas")
-                                       .child(tarantula.imgName).delete();
+                           try {
+                               if(tarantula.imgName.isEmpty()) {
+                                   throw new Exception();
+                               }else{
+                                   FirebaseStorage.getInstance().getReference()
+                                           .child("tarantulas")
+                                           .child(tarantula.imgName).delete();
+                               }
+                           }catch (Exception e) {
+
+                               Log.e("",e.getMessage());
                            }
+
                         });
-                       FirebaseFirestore.getInstance().collection("users")
-                               .document(FirebaseAuth.getInstance().getUid().toString());
+                FirebaseFirestore.getInstance().collection("users")
+                        .document(FirebaseAuth.getInstance().getUid().toString()).delete();
                        FirebaseAuth.getInstance().getCurrentUser().delete();
 
                         Toast.makeText(Tarantulas.this, "Succesfully deleted your account" , Toast.LENGTH_SHORT).show();

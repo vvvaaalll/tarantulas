@@ -179,10 +179,20 @@ public class TarantulaAdapter extends RecyclerView.Adapter<TarantulaAdapter.MyVi
                         public void onClick(DialogInterface dialog, int which) {
                             //DELETE FROM FIRESTORE AND FIRESTORAGE
                             String userID = FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
-                            if(!tarantula.imgName.isEmpty()) {
-                                FirebaseStorage.getInstance().getReference()
-                                        .child("tarantulas")
-                                        .child(tarantula.imgName).delete();
+                            try {
+                                if (!tarantula.imgName.isEmpty()) {
+                                    throw new Exception();
+                                    }
+                                else{
+                                    FirebaseStorage.getInstance().getReference()
+                                            .child("tarantulas")
+                                            .child(tarantula.imgName).delete();
+
+
+                                }
+                            }catch (Exception e){
+                                Log.e("",e.getMessage());
+
                             }
 
                                 FirebaseFirestore.getInstance().collection("users").document(userID)
@@ -203,14 +213,6 @@ public class TarantulaAdapter extends RecyclerView.Adapter<TarantulaAdapter.MyVi
                     });
                     AlertDialog ad = builder.create();
                     ad.show();
-
-
-
-
-
-
-
-
                 }
             });
 
