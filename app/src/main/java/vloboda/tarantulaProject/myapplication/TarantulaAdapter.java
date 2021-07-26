@@ -180,7 +180,7 @@ public class TarantulaAdapter extends RecyclerView.Adapter<TarantulaAdapter.MyVi
                             //DELETE FROM FIRESTORE AND FIRESTORAGE
                             String userID = FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
                             try {
-                                if (!tarantula.imgName.isEmpty()) {
+                                if (tarantula.imgName.isEmpty()) {
                                     throw new Exception();
                                     }
                                 else{
