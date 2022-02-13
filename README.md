@@ -165,4 +165,4 @@ Download [NodeJS](https://nodejs.org/en/download/)\
 Download [Android Studio](https://developer.android.com/studio/) \
 Download [Java SDK](https://www.oracle.com/java/technologies/sdk-downloads.html) \
 Install appium by entering cmd command: npm install -g appium  \
-Download [Katalon Studio](https://www.katalon.com/download/) \
+Download [Katalon Studio](https://www.katalon.com/download/) 
