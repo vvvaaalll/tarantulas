@@ -21,7 +21,7 @@ Login Activity <br />
 
 # MiTTPP Project:
 
-Katalon tests are made college subject Methods and techniques of software support testing. <br />
+Katalon tests are made for college subject Methods and techniques of software support testing. <br />
 Tested aplication is provided within repository.
 
 Used software
