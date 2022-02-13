@@ -1,0 +1,560 @@
+[35m[Appium][39m Welcome to Appium v1.22.2
+[35m[Appium][39m Non-default server args:
+[35m[Appium][39m   port: 56922
+[35m[Appium][39m   loglevel: info
+[35m[Appium][39m   tmpDir: C:\Users\vvvaa\AppData\Local\Temp\\Katalon\Appium\Temp1644746931706
+[35m[Appium][39m   chromedriverPort: 56923
+[35m[Appium][39m Deprecated server args:
+[35m[Appium][39m   [31m--chromedriver-port[39m => --default-capabilities
+[35m[Appium][39m Default capabilities, which will be added to each request unless overridden by desired capabilities:
+[35m[Appium][39m   chromedriverPort: 56923
+[35m[Appium][39m Appium REST http interface listener started on 0.0.0.0:56922
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/status[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/status [39m[32m200[39m [90m7 ms - 68[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/status[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/status [39m[32m200[39m [90m1 ms - 68[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session[39m
+[35m[HTTP][39m [90m{"desiredCapabilities":{"appActivity":".Settings","appPackage":"com.android.settings","newCommandTimeout":1800,"platformVersion":"11","automationName":"uiautomator2","autoGrantPermissions":true,"platformName":"Android","udid":"emulator-5554","deviceName":"emulator-5554 (sdk_gphone_x86 - Android 11)","platform":"ANDROID","systemPort":8294},"capabilities":{"firstMatch":[{"appium:appActivity":".Settings","appium:appPackage":"com.android.settings","appium:autoGrantPermissions":true,"appium:automationName":"uiautomator2","appium:deviceName":"emulator-5554 (sdk_gphone_x86 - Android 11)","appium:newCommandTimeout":1800,"platform":"ANDROID","platformName":"android","appium:platformVersion":"11","appium:systemPort":8294,"appium:udid":"emulator-5554"}]}}[39m
+[35m[BaseDriver][39m The following capabilities are not standard capabilities and should have an extension prefix:
+[35m[BaseDriver][39m   platform
+[35m[BaseDriver][39m   chromedriverPort
+[35m[Appium][39m Appium v1.22.2 creating new AndroidUiautomator2Driver (v1.70.1) session
+[35m[BaseDriver][39m The following capabilities were provided, but are not recognized by Appium:
+[35m[BaseDriver][39m   platform
+[35m[BaseDriver][39m Session created with session id: 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[UiAutomator2][39m Starting 'com.android.settings' directly on the device
+[35m[ADB][39m Found 1 'build-tools' folders under 'C:\Users\vvvaa\.katalon\tools\android_sdk' (newest first):
+[35m[ADB][39m     C:/Users/vvvaa/.katalon/tools/android_sdk/build-tools/29.0.3
+[35m[ADB][39m Using 'adb.exe' from 'C:\Users\vvvaa\.katalon\tools\android_sdk\platform-tools\adb.exe'
+[35m[AndroidDriver][39m Retrieving device list
+[35m[AndroidDriver][39m Using device: emulator-5554
+[35m[ADB][39m Using 'adb.exe' from 'C:\Users\vvvaa\.katalon\tools\android_sdk\platform-tools\adb.exe'
+[35m[ADB][39m Getting device platform version
+[35m[UiAutomator2][39m Relaxing hidden api policy
+[35m[AndroidDriver][39m No app sent in, not parsing package/activity
+[35m[ADB][39m Using 'apksigner.jar' from 'C:\Users\vvvaa\.katalon\tools\android_sdk\build-tools\29.0.3\lib\apksigner.jar'
+[35m[ADB][39m 'C:\Users\vvvaa\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v4.27.0.apk' is signed with the default certificate
+[35m[ADB][39m 'C:\Users\vvvaa\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk' is signed with the default certificate
+[35m[UiAutomator2][39m Server packages are not going to be (re)installed
+[35m[ADB][39m Adding packages ["io.appium.settings","io.appium.uiautomator2.server","io.appium.uiautomator2.server.test"] to Doze whitelist
+[35m[UiAutomator2][39m Starting UIAutomator2 server 4.27.0
+[35m[UiAutomator2][39m Using UIAutomator2 server from 'C:\Users\vvvaa\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v4.27.0.apk' and test from 'C:\Users\vvvaa\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk'
+[35m[UiAutomator2][39m Waiting up to 30000ms for UiAutomator2 to be online...
+[35m[WD Proxy][39m socket hang up
+[35m[WD Proxy][39m socket hang up
+[35m[WD Proxy][39m socket hang up
+[35m[WD Proxy][39m socket hang up
+[35m[WD Proxy][39m socket hang up
+[35m[WD Proxy][39m Determined the downstream protocol as 'W3C'
+[35m[AndroidDriver][39m Screen already unlocked, doing nothing
+[35m[UiAutomator2][39m Starting 'com.android.settings/.Settings and waiting for 'com.android.settings/.Settings'
+[35m[Appium][39m New AndroidUiautomator2Driver session created successfully, session 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb added to master session list
+[35m[HTTP][39m [37m<-- POST /wd/hub/session [39m[32m200[39m [90m11711 ms - 1186[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb [39m[32m200[39m [90m7 ms - 1140[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb [39m[32m200[39m [90m7 ms - 1140[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/status[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/status [39m[32m200[39m [90m1 ms - 68[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/timeouts[39m
+[35m[HTTP][39m [90m{"implicit":60000}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/timeouts [39m[32m200[39m [90m4 ms - 14[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot [39m[32m200[39m [90m739 ms - 217108[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect [39m[32m200[39m [90m31 ms - 50[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/appium/device/system_bars[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/appium/device/system_bars [39m[32m200[39m [90m92 ms - 149[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/appium/device/activate_app[39m
+[35m[HTTP][39m [90m{"bundleId":"vloboda.tarantulaProject.myapplication"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/appium/device/activate_app [39m[32m200[39m [90m860 ms - 14[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source [39m[32m200[39m [90m426 ms - 8114[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot [39m[32m200[39m [90m1336 ms - 1691140[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.TextView' and (@text = 'Already registered? Login Here' or . = 'Already registered? Login Here') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/createText']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m313 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect [39m[32m200[39m [90m8 ms - 50[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.TextView' and (@text = 'Already registered? Login Here' or . = 'Already registered? Login Here') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/createText']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m45 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-008c-ffff-ffff00000008/location[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-008c-ffff-ffff00000008/location [39m[32m200[39m [90m11 ms - 79[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/touch/perform[39m
+[35m[HTTP][39m [90m{"actions":[{"action":"tap","options":{"x":1,"y":1,"element":"00000000-0000-008c-ffff-ffff00000008"}}]}[39m
+[35m[UiAutomator2][39m calling get location: 00000000-0000-008c-ffff-ffff00000008
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/touch/perform [39m[32m200[39m [90m220 ms - 14[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source [39m[32m200[39m [90m178 ms - 8107[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot [39m[32m200[39m [90m1081 ms - 1920668[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.EditText' and (@text = 'Email' or . = 'Email') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/EmailAdress']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m51 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect [39m[32m200[39m [90m6 ms - 50[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.EditText' and (@text = 'Email' or . = 'Email') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/EmailAdress']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m37 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-0096-ffff-ffff0000001d/location[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-0096-ffff-ffff0000001d/location [39m[32m200[39m [90m9 ms - 77[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/touch/perform[39m
+[35m[HTTP][39m [90m{"actions":[{"action":"tap","options":{"x":1,"y":1,"element":"00000000-0000-0096-ffff-ffff0000001d"}}]}[39m
+[35m[UiAutomator2][39m calling get location: 00000000-0000-0096-ffff-ffff0000001d
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/touch/perform [39m[32m200[39m [90m1339 ms - 14[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source [39m[32m200[39m [90m24 ms - 7128[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot [39m[32m200[39m [90m730 ms - 1108746[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.EditText' and (@text = 'Email' or . = 'Email') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/EmailAdress']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m47 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect [39m[32m200[39m [90m6 ms - 50[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.EditText' and (@text = 'Email' or . = 'Email') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/EmailAdress']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m38 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-0096-ffff-ffff0000001d/location[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-0096-ffff-ffff0000001d/location [39m[32m200[39m [90m12 ms - 77[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-0096-ffff-ffff0000001d/clear[39m
+[35m[HTTP][39m [90m{"id":"00000000-0000-0096-ffff-ffff0000001d"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-0096-ffff-ffff0000001d/clear [39m[32m200[39m [90m16 ms - 14[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-0096-ffff-ffff0000001d/value[39m
+[35m[HTTP][39m [90m{"id":"00000000-0000-0096-ffff-ffff0000001d","text":"test@test.com","value":["t","e","s","t","@","t","e","s","t",".","c","o","m"]}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-0096-ffff-ffff0000001d/value [39m[32m200[39m [90m658 ms - 14[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source [39m[32m200[39m [90m78 ms - 7136[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot [39m[32m200[39m [90m656 ms - 1116032[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.EditText' and (@text = 'Password' or . = 'Password') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/Password']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m48 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect [39m[32m200[39m [90m5 ms - 50[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.EditText' and (@text = 'Password' or . = 'Password') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/Password']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m34 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-0096-ffff-ffff0000001e/location[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-0096-ffff-ffff0000001e/location [39m[32m200[39m [90m8 ms - 78[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/touch/perform[39m
+[35m[HTTP][39m [90m{"actions":[{"action":"tap","options":{"x":1,"y":1,"element":"00000000-0000-0096-ffff-ffff0000001e"}}]}[39m
+[35m[UiAutomator2][39m calling get location: 00000000-0000-0096-ffff-ffff0000001e
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/touch/perform [39m[32m200[39m [90m159 ms - 14[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source [39m[32m200[39m [90m84 ms - 7136[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot [39m[32m200[39m [90m647 ms - 1093590[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.EditText' and (@text = 'Password' or . = 'Password') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/Password']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m49 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect [39m[32m200[39m [90m6 ms - 50[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.EditText' and (@text = 'Password' or . = 'Password') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/Password']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m32 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-0096-ffff-ffff0000001e/location[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-0096-ffff-ffff0000001e/location [39m[32m200[39m [90m12 ms - 78[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-0096-ffff-ffff0000001e/clear[39m
+[35m[HTTP][39m [90m{"id":"00000000-0000-0096-ffff-ffff0000001e"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-0096-ffff-ffff0000001e/clear [39m[32m200[39m [90m19 ms - 14[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-0096-ffff-ffff0000001e/value[39m
+[35m[HTTP][39m [90m{"id":"00000000-0000-0096-ffff-ffff0000001e","text":"123456","value":["1","2","3","4","5","6"]}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-0096-ffff-ffff0000001e/value [39m[32m200[39m [90m1024 ms - 14[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source [39m[32m200[39m [90m20 ms - 7146[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot [39m[32m200[39m [90m653 ms - 1085054[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.Button' and (@text = 'LOG IN' or . = 'LOG IN') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/loginButton']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m44 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect [39m[32m200[39m [90m6 ms - 50[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.Button' and (@text = 'LOG IN' or . = 'LOG IN') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/loginButton']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m30 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-0096-ffff-ffff0000001f/location[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-0096-ffff-ffff0000001f/location [39m[32m200[39m [90m8 ms - 79[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/touch/perform[39m
+[35m[HTTP][39m [90m{"actions":[{"action":"tap","options":{"x":1,"y":1,"element":"00000000-0000-0096-ffff-ffff0000001f"}}]}[39m
+[35m[UiAutomator2][39m calling get location: 00000000-0000-0096-ffff-ffff0000001f
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/touch/perform [39m[32m200[39m [90m768 ms - 14[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source [39m[32m200[39m [90m431 ms - 6864[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot [39m[32m200[39m [90m1311 ms - 2437476[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source [39m[32m200[39m [90m42 ms - 22311[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot [39m[32m200[39m [90m1275 ms - 2701252[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.ImageView' and (@text = '' or . = '')]"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m60 ms - 267[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"accessibility id","value":"More options"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m17 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect [39m[32m200[39m [90m5 ms - 50[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"accessibility id","value":"More options"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m13 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-0098-ffff-ffff00000039/location[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-0098-ffff-ffff00000039/location [39m[32m200[39m [90m10 ms - 78[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/touch/perform[39m
+[35m[HTTP][39m [90m{"actions":[{"action":"tap","options":{"x":1,"y":1,"element":"00000000-0000-0098-ffff-ffff00000039"}}]}[39m
+[35m[UiAutomator2][39m calling get location: 00000000-0000-0098-ffff-ffff00000039
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/touch/perform [39m[32m200[39m [90m161 ms - 14[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source [39m[32m200[39m [90m402 ms - 7146[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot [39m[32m200[39m [90m1245 ms - 2663836[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.TextView' and (@text = 'Delete account' or . = 'Delete account') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/title']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m39 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect [39m[32m200[39m [90m6 ms - 50[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.TextView' and (@text = 'Delete account' or . = 'Delete account') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/title']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m34 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-0099-ffff-ffff00000069/location[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-0099-ffff-ffff00000069/location [39m[32m200[39m [90m9 ms - 78[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/touch/perform[39m
+[35m[HTTP][39m [90m{"actions":[{"action":"tap","options":{"x":1,"y":1,"element":"00000000-0000-0099-ffff-ffff00000069"}}]}[39m
+[35m[UiAutomator2][39m calling get location: 00000000-0000-0099-ffff-ffff00000069
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/touch/perform [39m[32m200[39m [90m1057 ms - 14[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source [39m[32m200[39m [90m546 ms - 8291[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot [39m[32m200[39m [90m1096 ms - 1884760[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.EditText' and (@text = 'test@test.com' or . = 'test@test.com') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/EmailAdress']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m39 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect [39m[32m200[39m [90m6 ms - 50[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.EditText' and (@text = 'test@test.com' or . = 'test@test.com') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/EmailAdress']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m32 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-009d-ffff-ffff00000008/location[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-009d-ffff-ffff00000008/location [39m[32m200[39m [90m10 ms - 77[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/touch/perform[39m
+[35m[HTTP][39m [90m{"actions":[{"action":"tap","options":{"x":1,"y":1,"element":"00000000-0000-009d-ffff-ffff00000008"}}]}[39m
+[35m[UiAutomator2][39m calling get location: 00000000-0000-009d-ffff-ffff00000008
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/touch/perform [39m[32m200[39m [90m990 ms - 14[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source [39m[32m200[39m [90m20 ms - 7146[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot [39m[32m200[39m [90m640 ms - 1106878[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.EditText' and (@text = 'test@test.com' or . = 'test@test.com') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/EmailAdress']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m167 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect [39m[32m200[39m [90m5 ms - 50[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.EditText' and (@text = 'test@test.com' or . = 'test@test.com') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/EmailAdress']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m34 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-009d-ffff-ffff00000008/location[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-009d-ffff-ffff00000008/location [39m[32m200[39m [90m8 ms - 77[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-009d-ffff-ffff00000008/clear[39m
+[35m[HTTP][39m [90m{"id":"00000000-0000-009d-ffff-ffff00000008"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-009d-ffff-ffff00000008/clear [39m[32m200[39m [90m19 ms - 14[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-009d-ffff-ffff00000008/value[39m
+[35m[HTTP][39m [90m{"id":"00000000-0000-009d-ffff-ffff00000008","text":"test@test.com","value":["t","e","s","t","@","t","e","s","t",".","c","o","m"]}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-009d-ffff-ffff00000008/value [39m[32m200[39m [90m1262 ms - 14[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source [39m[32m200[39m [90m97 ms - 7146[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot [39m[32m200[39m [90m654 ms - 1106106[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.EditText' and (@text = '••••••' or . = '••••••') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/Password']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m37 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect [39m[32m200[39m [90m5 ms - 50[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.EditText' and (@text = '••••••' or . = '••••••') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/Password']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m29 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-009d-ffff-ffff00000009/location[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-009d-ffff-ffff00000009/location [39m[32m200[39m [90m10 ms - 78[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/touch/perform[39m
+[35m[HTTP][39m [90m{"actions":[{"action":"tap","options":{"x":1,"y":1,"element":"00000000-0000-009d-ffff-ffff00000009"}}]}[39m
+[35m[UiAutomator2][39m calling get location: 00000000-0000-009d-ffff-ffff00000009
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/touch/perform [39m[32m200[39m [90m804 ms - 14[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source [39m[32m200[39m [90m18 ms - 7146[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot [39m[32m200[39m [90m663 ms - 1085038[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.EditText' and (@text = '••••••' or . = '••••••') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/Password']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m41 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect [39m[32m200[39m [90m5 ms - 50[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.EditText' and (@text = '••••••' or . = '••••••') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/Password']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m26 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-009d-ffff-ffff00000009/location[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-009d-ffff-ffff00000009/location [39m[32m200[39m [90m12 ms - 78[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-009d-ffff-ffff00000009/clear[39m
+[35m[HTTP][39m [90m{"id":"00000000-0000-009d-ffff-ffff00000009"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-009d-ffff-ffff00000009/clear [39m[32m200[39m [90m16 ms - 14[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-009d-ffff-ffff00000009/value[39m
+[35m[HTTP][39m [90m{"id":"00000000-0000-009d-ffff-ffff00000009","text":"123456","value":["1","2","3","4","5","6"]}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-009d-ffff-ffff00000009/value [39m[32m200[39m [90m1034 ms - 14[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source [39m[32m200[39m [90m16 ms - 7146[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot [39m[32m200[39m [90m659 ms - 1084364[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.Button' and (@text = 'LOG IN' or . = 'LOG IN') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/loginButton']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m36 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/window/rect [39m[32m200[39m [90m5 ms - 50[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.Button' and (@text = 'LOG IN' or . = 'LOG IN') and @resource-id = 'vloboda.tarantulaProject.myapplication:id/loginButton']"}[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/elements [39m[32m200[39m [90m22 ms - 139[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-009d-ffff-ffff0000000a/location[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/element/00000000-0000-009d-ffff-ffff0000000a/location [39m[32m200[39m [90m9 ms - 79[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/touch/perform[39m
+[35m[HTTP][39m [90m{"actions":[{"action":"tap","options":{"x":1,"y":1,"element":"00000000-0000-009d-ffff-ffff0000000a"}}]}[39m
+[35m[UiAutomator2][39m calling get location: 00000000-0000-009d-ffff-ffff0000000a
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/touch/perform [39m[32m200[39m [90m1114 ms - 14[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[W3C (98bfbb9d)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId 44e933dd-2455-4d19-91ca-a933d381ddab with 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/source [39m[32m200[39m [90m17 ms - 7376[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb/screenshot [39m[32m200[39m [90m648 ms - 1111262[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mDELETE[39m [37m/wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[Appium][39m Removing session 98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb from our master session list
+[35m[UiAutomator2][39m Restoring hidden api policy to the device default configuration
+[35m[HTTP][39m [37m<-- DELETE /wd/hub/session/98bfbb9d-b3cc-48be-9a8e-de70dbfd6ffb [39m[32m200[39m [90m193 ms - 14[39m
+[35m[HTTP][39m [90m[39m

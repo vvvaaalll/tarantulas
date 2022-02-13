@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>LogIn_AddTarantula_ClickDeleteAndQuit</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d5bbd2d3-afbb-4acd-bae4-3eccebbc2482</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ExitApp_stayLoggedIn</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e376e9dc-2afa-4835-a80f-97c803e82f6b</testCaseGuid>
+</TestCaseEntity>
